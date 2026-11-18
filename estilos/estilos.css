@@ -869,3 +869,118 @@ main {
         padding-top: 30px;
     }
 }
+
+
+/* PÁGINA DE LOGIN */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f1b6b5, #a7c3d0);
+}
+
+.login-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1 {
+    color: #a24c68;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-subtitulo {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.campo-login {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-login label {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-login input {
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.campo-login input:focus {
+    border-color: #a24c68;
+}
+
+.botao-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a24c68;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #843c55;
+}
+
+.login-cadastro {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.login-cadastro a,
+.voltar-inicio {
+    color: #a24c68;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-cadastro a:hover,
+.voltar-inicio:hover {
+    text-decoration: underline;
+}
+
+.voltar-inicio {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* AJUSTES DA PÁGINA DE CADASTRO */
+
+.login-card {
+    margin: 30px 0;
+}
+
+.login-card form {
+    margin-top: 25px;
+}
+
+.login-card .campo-login input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
