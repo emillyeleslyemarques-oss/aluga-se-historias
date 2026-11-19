@@ -1,7 +1,5 @@
 <?php
 
-// src/conecta.php
-
 $servidor = "localhost";
 
 $banco = "aluga-se-historias";

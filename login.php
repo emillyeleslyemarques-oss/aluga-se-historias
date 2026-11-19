@@ -1,8 +1,4 @@
 
-<?php
-// Aqui futuramente vamos programar a validação do login
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +15,7 @@
             <h1>Aluga-se Histórias</h1>
             <p class="login-subtitulo">Entre na sua conta e continue sua leitura.</p>
 
-            <form action="" method="POST">
+            <form action="processamentos/autenticar.php" method="POST">
 
                 <div class="campo-login">
                     <label for="email">E-mail</label>

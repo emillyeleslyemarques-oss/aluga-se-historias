@@ -1,16 +1,13 @@
-
-<?php
-// Futuramente vamos programar o cadastro no banco de dados
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | Aluga-se Histórias</title>
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
+
 <body>
 
     <main class="login-container">
@@ -19,7 +16,7 @@
             <h1>Aluga-se Histórias</h1>
             <p class="login-subtitulo">Crie sua conta para começar a ler!</p>
 
-            <form action="" method="POST">
+            <form action="processamentos/cadastrar.php" method="POST">
 
                 <div class="campo-login">
                     <label for="nome">Nome completo</label>
@@ -46,6 +43,14 @@
                         placeholder="Digite a senha novamente" required>
                 </div>
 
+                <div class="campo-login">
+                    <label for="dataDeNascimento">Data de nascimento</label>
+                    <input type="date"
+                        id="dataDeNascimento"
+                        name="dataDeNascimento"
+                        required>
+                </div>
+
                 <button type="submit" class="botao-login">
                     Criar conta
                 </button>
@@ -65,4 +70,5 @@
     </main>
 
 </body>
+
 </html>

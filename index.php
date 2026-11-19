@@ -61,25 +61,25 @@
         </div>
 
         <div class="categorias">
-            <a href="catalogo.php" class="categoria rosa">
+            <a href="catalogo.php?categoria=Romance" class="categoria rosa">
                 <span>01</span>
                 <h3>Romance</h3>
                 <p>Histórias que emocionam.</p>
             </a>
 
-            <a href="catalogo.php" class="categoria azul">
+            <a href="catalogo.php?categoria=Suspense" class="categoria azul">
                 <span>02</span>
                 <h3>Suspense</h3>
                 <p>Mistérios e descobertas.</p>
             </a>
 
-            <a href="catalogo.php" class="categoria oliva">
+            <a href="catalogo.php?categoria=Fantasia" class="categoria oliva">
                 <span>03</span>
                 <h3>Fantasia</h3>
                 <p>Novos mundos para explorar.</p>
             </a>
 
-            <a href="catalogo.php" class="categoria vinho">
+            <a href="catalogo.php?categoria=Drama" class="categoria vinho">
                 <span>04</span>
                 <h3>Drama</h3>
                 <p>Histórias inesquecíveis.</p>
