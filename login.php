@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,6 +41,5 @@
 
         </section>
     </main>
-
 </body>
 </html>

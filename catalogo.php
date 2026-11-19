@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Aluga-se Histórias</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
-</head>
-<body>
-<?php include "./includes/cabecalho.php"?>
+<?php include __DIR__ . '/includes/cabecalho.php'; ?>
 
 <main>
     <section class="titulo-pagina">
@@ -79,13 +70,4 @@
     </section>
 </main>
 
-<footer class="rodape">
-    <div class="rodape-conteudo">
-        <a href="index.php" class="logo logo-rodape">📖 Aluga-se Histórias.</a>
-        <p>Mais que livros, novas histórias.</p>
-    </div>
-    <p class="copyright">© 2026 Aluga-se Histórias. Projeto Integrador.</p>
-</footer>
-
-</body>
-</html>
+<?php include __DIR__ . '/includes/rodape.php'; ?>
