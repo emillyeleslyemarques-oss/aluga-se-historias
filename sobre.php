@@ -8,7 +8,7 @@
     </section>
 
     <section class="secao sobre-conteudo">
-        <img src="img/banner.jpg" alt="Livros em uma livraria">
+        <img src="assets/img/banner.jpg" alt="Livros em uma livraria">
 
         <div>
             <h2>Compartilhando histórias</h2>

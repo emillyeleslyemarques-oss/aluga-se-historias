@@ -5,7 +5,7 @@
 
     <section class="detalhes-livro">
         <div class="capa-detalhe">
-            <img src="img/livro1.jpg" alt="Capa do livro Jardim de Memórias">
+            <img src="assets/img/livro1.jpg" alt="Capa do livro Jardim de Memórias">
         </div>
 
         <div class="informacoes-livro">

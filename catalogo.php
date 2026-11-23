@@ -24,7 +24,7 @@
 
         <div class="livros">
             <article class="livro-card">
-                <img src="img/livro1.jpg" alt="Capa do livro 1">
+                <img src="assets/img/livro1.jpg" alt="Capa do livro 1">
                 <div class="livro-info">
                     <span class="genero-romance">Romance</span>
                     <h3>Jardim de Memórias</h3>
@@ -35,7 +35,7 @@
             </article>
 
             <article class="livro-card">
-                <img src="img/livro2.jpg" alt="Capa do livro 2">
+                <img src="assets/img/livro2.jpg" alt="Capa do livro 2">
                 <div class="livro-info">
                     <span class="genero-suspense">Suspense</span>
                     <h3>O Último Segredo</h3>
@@ -46,7 +46,7 @@
             </article>
 
             <article class="livro-card">
-                <img src="img/livro3.jpg" alt="Capa do livro 3">
+                <img src="assets/img/livro3.jpg" alt="Capa do livro 3">
                 <div class="livro-info">
                     <span class="genero-fantasia">Fantasia</span>
                     <h3>O Reino Esquecido</h3>
@@ -57,7 +57,7 @@
             </article>
 
             <article class="livro-card">
-                <img src="img/livro4.jpg" alt="Capa do livro 4">
+                <img src="assets/img/livro4.jpg" alt="Capa do livro 4">
                 <div class="livro-info">
                     <span class="genero-romance">Romance</span>
                     <h3>Cartas para o Amanhã</h3>
