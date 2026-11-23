@@ -21,3 +21,5 @@
 
     <a href="catalogo.php" class="botao-header">Encontrar livros</a>
 </header>
+
+<main>

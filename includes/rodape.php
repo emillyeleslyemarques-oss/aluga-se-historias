@@ -1,3 +1,5 @@
+</main>
+
 <footer class="rodape">
     <div class="rodape-conteudo">
         <a href="index.php" class="logo logo-rodape">📖 Aluga-se Histórias.</a>
