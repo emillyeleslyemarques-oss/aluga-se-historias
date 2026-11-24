@@ -1,13 +1,9 @@
 <?php 
 include __DIR__ . '/includes/cabecalho.php';
 require_once __DIR__ . '/src/genero_crud.php';
-require_once __DIR__ . '/src/conexao.php';
+require_once __DIR__ . '/conexao.php';
 
 $generos = buscarGeneros($conexao);
-foreach ($generos as $genero) {
-    $nomeGenero = $genero['nome'];
-    echo "<p>$nomeGenero</p>";
-}
 ?>
 
 <main>
@@ -49,29 +45,16 @@ foreach ($generos as $genero) {
         </div>
 
         <div class="categorias">
-            <a href="catalogo.php?categoria=Romance" class="categoria rosa">
-                <span>01</span>
-                <h3>Romance</h3>
-                <p>Histórias que emocionam.</p>
-            </a>
-
-            <a href="catalogo.php?categoria=Suspense" class="categoria azul">
-                <span>02</span>
-                <h3>Suspense</h3>
-                <p>Mistérios e descobertas.</p>
-            </a>
-
-            <a href="catalogo.php?categoria=Fantasia" class="categoria oliva">
-                <span>03</span>
-                <h3>Fantasia</h3>
-                <p>Novos mundos para explorar.</p>
-            </a>
-
-            <a href="catalogo.php?categoria=Drama" class="categoria vinho">
-                <span>04</span>
-                <h3>Drama</h3>
-                <p>Histórias inesquecíveis.</p>
-            </a>
+            <?php
+                $classes = ['categoria-rosa', 'categoria-azul', 'categoria-verde', 'categoria-vinho'];
+                $contador = 0;
+                foreach ($generos as $genero): ?>
+                <a href="catalogo.php?id=<?= $genero['id'] ?>" class="categoria <?= $classes[$contador] ?>">
+                    <span>0<?= $contador = $contador + 1 ?></span>
+                    <h3><?= $genero['titulo'] ?></h3>
+                    <p><?= $genero['descricao'] ?></p>
+                </a>
+            <?php endforeach; ?>
         </div>
     </section>
 
