@@ -1,4 +1,12 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php 
+include __DIR__ . '/includes/cabecalho.php';
+require_once __DIR__ . '/src/genero_crud.php';
+require_once __DIR__ . '/conexao.php'; 
+
+$id = $_GET['id'];
+$genero = buscarGeneroPorId($conexao, $id);
+ 
+?>
 
 <main>
     <section class="titulo-pagina">
