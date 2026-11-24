@@ -90,11 +90,11 @@ $generos = buscarGeneros($conexao);
             </article>
 
             <article class="livro-card">
-                <img src="img/livro3.jpg" alt="Capa ilustrada do livro 3">
+                <img src="imagens-bd/livro1-fantasia.png" alt="Capa ilustrada do livro 3">
                 <div class="livro-info">
                     <span class="genero-fantasia">Fantasia</span>
                     <h3>O Reino das Sombras Perdidas</h3>
-                    <p>Uma aventura por novos mundos.</p>
+                    <p>Uma jornada por terras misteriosas em busca de segredos capazes de salvar um reino.</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>

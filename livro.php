@@ -1,5 +1,18 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include __DIR__ . '/includes/cabecalho.php';
+require_once __DIR__ . '/conexao.php';
+require_once __DIR__ . '/src/livro_crud.php';
 
+$id = $_GET['id'] ?? null;
+
+$livro = null;
+
+if ($id !== null && is_numeric($id)) {
+    $livro = buscarLivroPorId($conexao, (int) $id);
+}
+
+?>
+
+<?php ?>
 <main class="secao">
     <a href="catalogo.php" class="voltar">← Voltar para o catálogo</a>
 

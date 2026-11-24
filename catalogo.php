@@ -2,11 +2,21 @@
 include __DIR__ . '/includes/cabecalho.php';
 require_once __DIR__ . '/src/genero_crud.php';
 require_once __DIR__ . '/conexao.php'; 
+require_once __DIR__. '/src/livro_crud.php';
 
-$id = $_GET['id'];
-$genero = buscarGeneroPorId($conexao, $id);
- 
+$id = $_GET['id'] ?? null;
+
+$genero = null;
+
+if ($id !== null && is_numeric($id)) {
+    $genero = buscarGeneroPorId($conexao, (int) $id);
+}
+
+$livros = buscarLivros($conexao);
+
+ //var_dump($livros)
 ?>
+
 
 <main>
     <section class="titulo-pagina">
@@ -31,6 +41,17 @@ $genero = buscarGeneroPorId($conexao, $id);
         </form>
 
         <div class="livros">
+            <?php foreach ($livros as $livro): ?>
+                <article class="livro-card">
+                    <img src="<?= $livro['caminhoImagem'] ?>" alt="<?= $livro['titulo'] ?>">
+                    <div class="livro-info">
+                        <span><?= $livro['genero_id'] ?></span>
+                        <h3><?= $livro['titulo'] ?></h3>
+                        <p>Autoria <?= $livro['autoria'] ?></p>
+                        <a href="livro.php?id=<?= $livro['id'] ?>">Veja detalhes</a>
+                    </div>
+                </article>
+            <?php endforeach;?>
             <article class="livro-card">
                 <img src="imagens-bd/Entre Mentiras e Desejos.png" alt="Capa do livro 1">
                 <div class="livro-info">
