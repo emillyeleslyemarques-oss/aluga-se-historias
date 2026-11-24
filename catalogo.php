@@ -24,44 +24,44 @@
 
         <div class="livros">
             <article class="livro-card">
-                <img src="img/livro1.jpg" alt="Capa do livro 1">
+                <img src="imagens-bd/Entre Mentiras e Desejos.png" alt="Capa do livro 1">
                 <div class="livro-info">
                     <span class="genero-romance">Romance</span>
-                    <h3>Jardim de Memórias</h3>
-                    <p>Autora: Ana Martins</p>
+                    <h3>Entre Mentiras e desejos</h3>
+                    <p>Autora: Laura Mendes</p>
                     <p>Disponibilidade: Disponível</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>
 
             <article class="livro-card">
-                <img src="img/livro2.jpg" alt="Capa do livro 2">
+                <img src="imagens-bd/O peso das minhas escolhas.png" alt="Capa do livro 2">
                 <div class="livro-info">
-                    <span class="genero-suspense">Suspense</span>
-                    <h3>O Último Segredo</h3>
-                    <p>Autor: Lucas Almeida</p>
+                    <span class="genero-suspense">Drama</span>
+                    <h3>O Peso das Minhas Escolhas</h3>
+                    <p>Autor: Rafel Monteiro</p>
                     <p>Disponibilidade: Disponível</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>
 
             <article class="livro-card">
-                <img src="img/livro3.jpg" alt="Capa do livro 3">
+                <img src="imagens-bd/livro1-fantasia.png" alt="Capa do livro 3">
                 <div class="livro-info">
                     <span class="genero-fantasia">Fantasia</span>
-                    <h3>O Reino Esquecido</h3>
-                    <p>Autora: Sofia Costa</p>
+                    <h3>O Reino das Sombras Perdidas</h3>
+                    <p>Autor: Thiago Martins</p>
                     <p>Disponibilidade: Disponível</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>
 
             <article class="livro-card">
-                <img src="img/livro4.jpg" alt="Capa do livro 4">
+                <img src="imagens-bd/livro-suspense2.png" alt="Capa do livro 4">
                 <div class="livro-info">
-                    <span class="genero-romance">Romance</span>
-                    <h3>Cartas para o Amanhã</h3>
-                    <p>Autora: Marina Lopes</p>
+                    <span class="genero-romance">Suspense</span>
+                    <h3>O Segredo da Casa Sombria</h3>
+                    <p>Autora: Clara Monteiro</p>
                     <p>Disponibilidade: Disponível</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>

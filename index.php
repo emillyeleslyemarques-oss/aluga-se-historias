@@ -77,11 +77,11 @@
 
         <div class="livros">
             <article class="livro-card">
-                <img src="img/livro1.jpg" alt="Capa ilustrada do livro 1">
+                <img src="imagens-bd/livro3-romance.png" alt="Capa ilustrada do livro 1">
                 <div class="livro-info">
                     <span class="genero-romance">Romance</span>
-                    <h3>Jardim de Memórias</h3>
-                    <p>Uma história sobre recomeços.</p>
+                    <h3>A Melodia dos Dias Perdidos</h3>
+                    <p>Uma antiga melodia revela lembranças, amores e histórias que o tempo não conseguiu apagar.</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>
@@ -90,7 +90,7 @@
                 <img src="img/livro2.jpg" alt="Capa ilustrada do livro 2">
                 <div class="livro-info">
                     <span class="genero-suspense">Suspense</span>
-                    <h3>O Último Segredo</h3>
+                    <h3>O Mapa das Coisas Esquecidas</h3>
                     <p>Nem tudo é o que parece.</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
