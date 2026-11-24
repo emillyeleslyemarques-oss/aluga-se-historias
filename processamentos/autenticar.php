@@ -1,5 +1,11 @@
 
 <?php
+
+
+
+   require_once "../conexao.php";
+   require_once "../src/usuario_crud.php";
+
 // Verificar se o formulário foi enviado pelo método POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -10,30 +16,40 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Verificar se os campos estão vazios
     if (empty($email) || empty($senha)) {
 
-        header("Location: ../login.php");
+        header("location:../login.php");
         exit;
     }
 
     // Verificar se o e-mail é válido
-    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+       elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-        header("Location: ../login.php");
+        header("location:../index.php");
         exit;
     }
 
     else {
 
-        // Futuramente vamos consultar o usuário no banco de dados
-        // e verificar a senha com password_verify()
-        header("Location: ../login.php");
+        // Buscar o usuário pelo e-mail
+        $usuario = buscarUsuarioPorEmail($conexao, $email);
+
+        // Verificar se o usuário existe e se a senha está correta
+        if ($usuario && (password_verify($senha, $usuario["senha"]) ||
+            $senha === $usuario["senha"]
+         )) {
+
+        header("location:../index.php");
         exit;
+        } else {
+
+            header("location:../login.php");
+            exit;
+        }
     }
 
-}
-else {
+} else {
 
     // Impedir acesso direto ao processamento
-    header("Location: ../login.php");
+    header("location:../index.php");
     exit;
 }
 
