@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | Aluga-se Histórias</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php
+$titulo = "Aluga-se Histórias | Cadastro ";
+include_once __DIR__ . "/includes/head.php";
+?>
 
 <body>
-
     <main class="login-container">
         <section class="login-card">
-
             <h1>Aluga-se Histórias</h1>
             <p class="login-subtitulo">Crie sua conta para começar a ler!</p>
 
@@ -65,7 +60,6 @@
             <a href="index.php" class="voltar-inicio">
                 Voltar para o início
             </a>
-
         </section>
     </main>
 

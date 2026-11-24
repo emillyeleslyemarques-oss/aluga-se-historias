@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Aluga-se Histórias</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<?php
+$titulo = "Aluga-se Histórias | Login";
+include_once __DIR__ . "/includes/head.php";
+?>
 
+<body>
     <main class="login-container">
         <section class="login-card">
 
