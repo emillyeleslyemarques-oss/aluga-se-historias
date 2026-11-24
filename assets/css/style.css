@@ -188,32 +188,6 @@ main {
     border-radius: 15px;
 }
 
-.cartao-flutuante {
-    position: absolute;
-    bottom: -20px;
-    left: -25px;
-    background: var(--rosa);
-    padding: 18px 22px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.cartao-flutuante span,
-.cartao-flutuante strong {
-    display: block;
-}
-
-.cartao-flutuante span {
-    font-size: 11px;
-    color: var(--marrom);
-}
-
-.cartao-flutuante strong {
-    font-family: Georgia, serif;
-    font-size: 16px;
-    color: var(--marrom);
-}
-
 /* PESQUISA */
 
 .pesquisa {
@@ -267,6 +241,10 @@ main {
 
 .secao {
     margin-bottom: 90px;
+}
+
+.secao > div {
+    margin-top: 24px;
 }
 
 .titulo-secao {
@@ -380,14 +358,6 @@ main {
     padding: 20px;
 }
 
-.livro-categoria {
-    color: var(--terracota);
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .livro-info h3 {
     font-family: Georgia, serif;
     color: var(--azul-escuro);
@@ -419,7 +389,7 @@ main {
     margin-bottom: 85px;
 }
 
-.como-texto h2 {
+.como-funciona h2 {
     font-family: Georgia, serif;
     font-size: 35px;
     line-height: 1.2;
@@ -427,7 +397,7 @@ main {
     margin-bottom: 15px;
 }
 
-.como-texto p {
+.como-funciona p {
     color: var(--cinza);
     font-size: 14px;
 }
@@ -473,11 +443,12 @@ main {
     margin-bottom: 85px;
 }
 
-.chamada-final > span {
-    color: var(--rosa);
-    font-size: 11px;
+.chamada-final > p {
+    color: var(--branco);
+    font-size: 12px;
     letter-spacing: 2px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .chamada-final h2 {
@@ -508,17 +479,6 @@ main {
     color: #E5E8E8;
     font-size: 13px;
     margin-top: 8px;
-}
-
-.rodape-links {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-    font-size: 13px;
-}
-
-.rodape-links a:hover {
-    color: var(--rosa);
 }
 
 .copyright {
@@ -963,8 +923,8 @@ main {
 
 .voltar-inicio {
     display: block;
-    text-align: center;
-    margin-top: 20px;
+    text-align: left;
+    margin-block: 16px;
 }
 
 /* AJUSTES DA PÁGINA DE CADASTRO */
@@ -980,4 +940,22 @@ main {
 .login-card .campo-login input {
     box-sizing: border-box;
     width: 100%;
+}
+
+.informacoes-livro {
+    padding-block-start: 20px;
+    padding-block-end: 24px;
+}
+.informacoes-extra {
+    padding-block-end: 8px;
+}
+
+.informacoes-botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.login-card .voltar-inicio {
+    text-align: center;
 }
