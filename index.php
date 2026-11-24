@@ -87,11 +87,11 @@
             </article>
 
             <article class="livro-card">
-                <img src="img/livro2.jpg" alt="Capa ilustrada do livro 2">
+                <img src="imagens-bd/livro-suspense.png" alt="Capa ilustrada do livro 2">
                 <div class="livro-info">
                     <span class="genero-suspense">Suspense</span>
                     <h3>O Mapa das Coisas Esquecidas</h3>
-                    <p>Nem tudo é o que parece.</p>
+                    <p>Um mapa misterioso revela segredos escondidos e caminhos que podem mudar tudo.</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
             </article>
@@ -100,7 +100,7 @@
                 <img src="img/livro3.jpg" alt="Capa ilustrada do livro 3">
                 <div class="livro-info">
                     <span class="genero-fantasia">Fantasia</span>
-                    <h3>O Reino Esquecido</h3>
+                    <h3>O Reino das Sombras Perdidas</h3>
                     <p>Uma aventura por novos mundos.</p>
                     <a href="livro.php">Ver detalhes →</a>
                 </div>
