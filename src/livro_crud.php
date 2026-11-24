@@ -2,11 +2,17 @@
 <?php
 
 // Função para buscar um livro pelo ID
-function buscarLivros(PDO $conexao): array{
-   $query = "SELECT * FROM livros ORDER BY titulo ASC";
-   
-   $consulta = $conexao->query($query);
-   return $consulta->fetchAll();
+function buscarLivros(PDO $conexao): array {
+
+    $query = "SELECT livros.*, generos.nome AS nome_genero
+              FROM livros
+              INNER JOIN generos 
+              ON livros.genero_id = generos.id
+              ORDER BY livros.titulo ASC";
+
+    $consulta = $conexao->query($query);
+
+    return $consulta->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
