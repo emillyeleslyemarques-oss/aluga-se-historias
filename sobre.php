@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/includes/cabecalho.php'; ?>
 
 <section class="titulo-pagina">
     <span class="etiqueta">NOSSA HISTÓRIA</span>
@@ -6,7 +6,7 @@
     <p>Mais que uma livraria, um convite para descobrir novos mundos.</p>
 </section>
 
-<section class="secao sobre-conteudo">
+<section class="secao">
     <img src="assets/img/banner.jpg" alt="Livros em uma livraria">
 
     <div>
@@ -36,4 +36,4 @@
     <a href="catalogo.php" class="botao-principal">Conhecer o catálogo</a>
 </section>
 
-<?php include __DIR__ . '/includes/rodape.php'; ?>
+<?php include_once __DIR__ . '/includes/rodape.php'; ?>

@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/includes/cabecalho.php'; ?>
 
 <section class="titulo-pagina">
     <span class="etiqueta">NOSSO ACERVO</span>
@@ -68,4 +68,4 @@
     </div>
 </section>
 
-<?php include __DIR__ . '/includes/rodape.php'; ?>
+<?php include_once __DIR__ . '/includes/rodape.php'; ?>

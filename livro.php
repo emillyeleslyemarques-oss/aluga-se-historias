@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/includes/cabecalho.php'; ?>
 
 <a href="catalogo.php" class="voltar">← Voltar para o catálogo</a>
 
@@ -35,4 +35,4 @@
     </p>
 </section>
 
-<?php include __DIR__ . '/includes/rodape.php'; ?>
+<?php include_once __DIR__ . '/includes/rodape.php'; ?>

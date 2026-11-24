@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/includes/cabecalho.php'; ?>
 
 <section class="titulo-pagina">
     <span class="etiqueta">SUA PRÓXIMA LEITURA</span>

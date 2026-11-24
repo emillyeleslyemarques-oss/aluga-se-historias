@@ -1,12 +1,12 @@
-<?php include __DIR__ . '/includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/includes/cabecalho.php'; ?>
 
 <section class="hero">
-    <div class="hero-texto">
+    <div class="hero-conteudo">
         <span class="etiqueta">UM NOVO JEITO DE LER</span>
         <h1>Sua próxima história começa aqui.</h1>
         <p>Descubra novos mundos, conheça diferentes autores e encontre seu próximo livro favorito.</p>
 
-        <div class="botoes">
+        <div class="hero-botoes">
             <a href="catalogo.php" class="botao-principal">Explorar livros</a>
             <a href="#como-funciona" class="botao-secundario">Como funciona?</a>
         </div>
@@ -27,7 +27,7 @@
     </form>
 </section>
 
-<section class="secao" id="categorias">
+<section class="secao">
     <div class="titulo-secao">
         <div>
             <span class="etiqueta">EXPLORE</span>
@@ -114,7 +114,7 @@
         <p>Uma nova história em poucos passos.</p>
     </div>
 
-    <div class="passos">
+    <div>
         <div class="passo">
             <span>01</span>
             <h3>Escolha seu livro</h3>
@@ -141,4 +141,4 @@
     <a href="catalogo.php" class="botao-principal">Descobrir livros</a>
 </section>
 
-<?php include __DIR__ . '/includes/rodape.php'; ?>
+<?php include_once __DIR__ . '/includes/rodape.php'; ?>
