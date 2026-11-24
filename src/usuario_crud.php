@@ -34,3 +34,5 @@ function cadastrarUsuario($conexao, $nome, $email, $senha, $dataDeNascimento) {
 
     return $comando->fetch(PDO::FETCH_ASSOC);
 }
+
+
