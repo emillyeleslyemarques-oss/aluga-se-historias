@@ -33,10 +33,17 @@
                     <label for="livro">Livro desejado</label>
                     <select id="livro" name="livro" required>
                         <option value="">Selecione um livro</option>
-                        <option>Jardim de Memórias</option>
-                        <option>O Último Segredo</option>
-                        <option>O Reino Esquecido</option>
-                        <option>Cartas para o Amanhã</option>
+                        <option>A Lenda dos Sete Reinos</option>
+                        <option>A Melodia dos Dias Perdidos</option>
+                        <option>Entre Cartas e Promessas</option>
+                        <option>Entre Mentiras e Desejos</option>
+                        <option>O Guardião das Estrelas Esquecidas</option>
+                        <option>O Mapa das Coisas Esquecidas</option>
+                        <option>O Peso das Minhas Escolhas</option>
+                        <option>O Reino das Sombras Perdidas</option>
+                        <option>O Segredo da Casa Sombria</option>
+                        <option>O Último Trem da Meia-noite</option>
+                        <option>Quando o Destino nos Encontrou</option>
                     </select>
                 </div>
 
