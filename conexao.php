@@ -6,7 +6,7 @@ $banco = "aluga-se-historias";
 
 $usuario = "root";
 
-$senha = "senacpenha";
+$senha = "resiliencia";
  
 try {
 
