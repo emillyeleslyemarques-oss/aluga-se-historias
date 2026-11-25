@@ -5,6 +5,3 @@
     </div>
     <p class="copyright">© 2026 Aluga-se Histórias. Projeto Integrador.</p>
 </footer>
-
-</body>
-</html>
