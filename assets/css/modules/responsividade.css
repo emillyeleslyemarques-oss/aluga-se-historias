@@ -1,0 +1,130 @@
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        padding: 20px 5%;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .como-funciona {
+        gap: 25px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros button {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .campos-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 22px 18px;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo-pagina {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .cabecalho nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 0;
+    }
+
+    .hero-imagem img {
+        height: 280px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 22px;
+        margin-bottom: 60px;
+    }
+
+    .pesquisa form {
+        width: 100%;
+    }
+
+    .titulo-secao {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .categorias,
+    .livros {
+        grid-template-columns: 1fr;
+    }
+
+    .livro-card > img {
+        height: 320px;
+    }
+
+    .capa-detalhe img {
+        height: auto;
+        max-height: 480px;
+    }
+
+    .como-funciona {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+    }
+
+    .chamada-final h2 {
+        font-size: 27px;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+
+    .rodape-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+}
