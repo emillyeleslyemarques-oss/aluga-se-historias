@@ -10,12 +10,12 @@ $generos = buscarGeneros($conexao);
 
 <main>
     <section class="hero">
-        <div class="hero-texto">
+        <div class="hero-conteudo">
             <span class="etiqueta">UM NOVO JEITO DE LER</span>
             <h1>Sua próxima história começa aqui.</h1>
             <p>Descubra novos mundos, conheça diferentes autores e encontre seu próximo livro favorito.</p>
 
-            <div class="botoes">
+            <div class="hero-botoes">
                 <a href="catalogo.php" class="botao-principal">Explorar livros</a>
                 <a href="#como-funciona" class="botao-secundario">Como funciona?</a>
             </div>
@@ -36,14 +36,14 @@ $generos = buscarGeneros($conexao);
         </form>
     </section>
 
-    <section class="secao" id="categorias">
+    <section class="secao">
         <div class="titulo-secao">
             <div>
                 <span class="etiqueta">EXPLORE</span>
                 <h2>Encontre seu gênero favorito</h2>
                 <p>Histórias para todos os momentos.</p>
             </div>
-            <a href="catalogo.php">Ver catálogo completo →</a>
+            <a href="catalogo.php" class="link-secao">Ver catálogo completo →</a>
         </div>
 
         <div class="categorias">
@@ -69,7 +69,7 @@ $generos = buscarGeneros($conexao);
             <h2>Livros em destaque</h2>
             <p>Descubra algumas histórias disponíveis.</p>
         </div>
-        <a href="catalogo.php">Ver todos →</a>
+        <a href="catalogo.php" class="link-secao">Ver todos →</a>
     </div>
 
     <div class="livros">

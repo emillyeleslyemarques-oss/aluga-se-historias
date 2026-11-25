@@ -9,7 +9,7 @@
 <body>
 
 <header class="cabecalho">
-    <a href="index.php" class="logo">📖 Aluga-se Histórias.</a>
+    <a href="index.php" class="logo">📖 Aluga-se <span>Histórias.</span></a>
 
     <nav>
         <a href="index.php">Início</a>
