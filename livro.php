@@ -31,14 +31,13 @@ if ($livro !== null) {
 
 <main class="secao">
 
-    <a href="catalogo.php" class="voltar">
+    <a href="catalogo.php" class="voltar-inicio">
         ← Voltar para o catálogo
     </a>
 
     <?php if ($livro !== null): ?>
 
-        <section class="detalhes-livro">
-
+        <section>
             <div class="capa-detalhe">
 
                 <img 
@@ -58,8 +57,8 @@ if ($livro !== null) {
                     <?= htmlspecialchars($livro['titulo']) ?>
                 </h1>
 
-                <p class="autor">
-                    Autoria: <?= htmlspecialchars($livro['autoria']) ?>
+                <p>
+                    <strong>Autoria:</strong> <?= htmlspecialchars($livro['autoria']) ?>
                 </p>
 
                 <p>
@@ -87,7 +86,7 @@ if ($livro !== null) {
 
         </section>
 
-        <section class="descricao-livro">
+        <section>
 
             <h2>Sobre o livro</h2>
 
