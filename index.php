@@ -22,7 +22,7 @@ $generos = buscarGeneros($conexao);
         </div>
 
         <div class="hero-imagem">
-            <img src="img/banner.jpg" alt="Livros em uma livraria aconchegante">
+            <img src="assets/img/banner.jpg" alt="Livros em uma livraria aconchegante">
         </div>
     </section>
 
