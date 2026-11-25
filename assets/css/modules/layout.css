@@ -1,0 +1,153 @@
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background: var(--branco);
+    min-height: 85px;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid #EAE5DC;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--vinho);
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho nav a {
+    font-size: 14px;
+    color: var(--marrom);
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: var(--vinho);
+}
+
+.botao-header {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.botao-header:hover {
+    background: var(--vinho);
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+    padding: 75px 0;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.12;
+    color: var(--azul-escuro);
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--vinho);
+    display: block;
+}
+
+.hero-conteudo > p {
+    max-width: 500px;
+    color: var(--cinza);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-imagem {
+    position: relative;
+    background: var(--azul);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background: var(--azul-escuro);
+    color: white;
+    padding: 30px 8% 18px;
+    margin-top: 55px;
+}
+
+.logo-rodape {
+    color: white;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 22px;
+}
+
+.rodape-conteudo > p {
+    color: #E5E8E8;
+    font-size: 14px;
+}
+
+.rodape > div > p {
+    color: #E5E8E8;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 16px;
+    text-align: center;
+    color: #E5E8E8;
+    font-size: 12px;
+}
+
+.rodape .copyright {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 16px;
+}
+
+.rodape-links {
+    display: flex;
+    gap: 15px;
+}
