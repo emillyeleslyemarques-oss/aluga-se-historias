@@ -4,7 +4,7 @@
 // Função para buscar um livro pelo ID
 function buscarLivros(PDO $conexao): array {
 
-    $query = "SELECT livros.*, generos.nome AS nome_genero
+    $query = "SELECT livros.*, generos.titulo AS nome_genero
               FROM livros
               INNER JOIN generos 
               ON livros.genero_id = generos.id

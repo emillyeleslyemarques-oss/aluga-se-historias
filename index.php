@@ -2,7 +2,9 @@
 include __DIR__ . '/includes/cabecalho.php';
 require_once __DIR__ . '/src/genero_crud.php';
 require_once __DIR__ . '/conexao.php';
+require_once __DIR__ . '/src/livro_crud.php';
 
+$livros = buscarLivros($conexao);
 $generos = buscarGeneros($conexao);
 ?>
 
@@ -58,48 +60,66 @@ $generos = buscarGeneros($conexao);
         </div>
     </section>
 
-    <section class="secao">
-        <div class="titulo-secao">
-            <div>
-                <span class="etiqueta">NOSSO ACERVO</span>
-                <h2>Livros em destaque</h2>
-                <p>Descubra algumas histórias disponíveis.</p>
-            </div>
-            <a href="catalogo.php">Ver todos →</a>
+    
+<section class="secao">
+    <div class="titulo-secao">
+        <div>
+            <span class="etiqueta">NOSSO ACERVO</span>
+            <h2>Livros em destaque</h2>
+            <p>Descubra algumas histórias disponíveis.</p>
         </div>
+        <a href="catalogo.php">Ver todos →</a>
+    </div>
 
-        <div class="livros">
-            <article class="livro-card">
-                <img src="imagens-bd/livro3-romance.png" alt="Capa ilustrada do livro 1">
-                <div class="livro-info">
-                    <span class="genero-romance">Romance</span>
-                    <h3>A Melodia dos Dias Perdidos</h3>
-                    <p>Uma antiga melodia revela lembranças, amores e histórias que o tempo não conseguiu apagar.</p>
-                    <a href="livro.php">Ver detalhes →</a>
-                </div>
-            </article>
+    <div class="livros">
 
-            <article class="livro-card">
-                <img src="imagens-bd/livro-suspense.png" alt="Capa ilustrada do livro 2">
-                <div class="livro-info">
-                    <span class="genero-suspense">Suspense</span>
-                    <h3>O Mapa das Coisas Esquecidas</h3>
-                    <p>Um mapa misterioso revela segredos escondidos e caminhos que podem mudar tudo.</p>
-                    <a href="livro.php">Ver detalhes →</a>
-                </div>
-            </article>
+        <?php
+        $contador = 0;
+
+        foreach ($livros as $livro):
+
+            if ($contador == 3) {
+                break;
+            }
+        ?>
 
             <article class="livro-card">
-                <img src="imagens-bd/livro1-fantasia.png" alt="Capa ilustrada do livro 3">
+
+                <img
+                    src="<?= htmlspecialchars($livro['caminhoImagem']) ?>"
+                    alt="Capa de <?= htmlspecialchars($livro['titulo']) ?>"
+                >
+
                 <div class="livro-info">
-                    <span class="genero-fantasia">Fantasia</span>
-                    <h3>O Reino das Sombras Perdidas</h3>
-                    <p>Uma jornada por terras misteriosas em busca de segredos capazes de salvar um reino.</p>
-                    <a href="livro.php">Ver detalhes →</a>
+
+                    <span class="genero-romance">
+                        <?= htmlspecialchars($livro['nome_genero']) ?>
+                    </span>
+
+                    <h3>
+                        <?= htmlspecialchars($livro['titulo']) ?>
+                    </h3>
+
+                    <p>
+                        <?= htmlspecialchars(mb_substr($livro['descricao'], 0, 20)) ?>...
+                    </p>
+
+                    <a href="livro.php?id=<?= $livro['id'] ?>">
+                        Ver detalhes →
+                    </a>
+
                 </div>
+
             </article>
-        </div>
-    </section>
+
+        <?php
+            $contador++;
+        endforeach;
+        ?>
+
+    </div>
+</section>
+
 
     <section class="como-funciona" id="como-funciona">
         <div>

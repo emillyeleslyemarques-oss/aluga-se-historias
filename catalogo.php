@@ -1,3 +1,4 @@
+
 <?php
 include __DIR__ . '/includes/cabecalho.php';
 
@@ -6,6 +7,8 @@ require_once __DIR__ . '/src/genero_crud.php';
 require_once __DIR__ . '/src/livro_crud.php';
 
 $livros = buscarLivros($conexao);
+
+$id = $_GET['id'] ?? '';
 
 ?>
 
@@ -48,33 +51,37 @@ $livros = buscarLivros($conexao);
 
             <?php foreach ($livros as $livro): ?>
 
-                <article class="livro-card">
+                <?php if ($id == '' || $livro['genero_id'] == $id): ?>
 
-                    <img
-                        src="<?= $livro['caminhoImagem'] ?>"
-                        alt="Capa do livro <?= $livro['titulo'] ?>">
+                    <article class="livro-card">
 
-                    <div class="livro-info">
+                        <img
+                            src="<?= $livro['caminhoImagem'] ?>"
+                            alt="Capa do livro <?= $livro['titulo'] ?>">
 
-                        <span>
-                            <?= $livro['nome_genero'] ?>
-                        </span>
+                        <div class="livro-info">
 
-                        <h3>
-                            <?= $livro['titulo'] ?>
-                        </h3>
+                            <span>
+                                <?= $livro['nome_genero'] ?>
+                            </span>
 
-                        <p>
-                            Autoria: <?= $livro['autoria'] ?>
-                        </p>
+                            <h3>
+                                <?= $livro['titulo'] ?>
+                            </h3>
 
-                        <a href="livro.php?id=<?= $livro['id'] ?>">
-                            Veja detalhes →
-                        </a>
+                            <p>
+                                Autoria: <?= $livro['autoria'] ?>
+                            </p>
 
-                    </div>
+                            <a href="livro.php?id=<?= $livro['id'] ?>">
+                                Veja detalhes →
+                            </a>
 
-                </article>
+                        </div>
+
+                    </article>
+
+                <?php endif; ?>
 
             <?php endforeach; ?>
 
