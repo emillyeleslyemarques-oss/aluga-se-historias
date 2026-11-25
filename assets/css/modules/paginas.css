@@ -160,6 +160,13 @@
     background: linear-gradient(135deg, #f1b6b5, #a7c3d0);
 }
 
+main.login-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
 .login-card {
     background-color: #fff;
     width: 100%;

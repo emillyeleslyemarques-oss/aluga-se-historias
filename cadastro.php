@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,11 +56,6 @@
                 </button>
 
             </form>
-
-            <p class="login-cadastro">
-                Já possui uma conta?
-                <a href="login.php">Entrar</a>
-            </p>
 
             <a href="index.php" class="voltar-inicio">
                 Voltar para o início
