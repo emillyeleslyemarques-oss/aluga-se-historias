@@ -6,9 +6,25 @@ require_once __DIR__ . '/conexao.php';
 require_once __DIR__ . '/src/genero_crud.php';
 require_once __DIR__ . '/src/livro_crud.php';
 
-$livros = buscarLivros($conexao);
-
+// Recebemos os dados da pesquisa
+$busca = $_GET['busca'] ?? '';
+$categoria = $_GET['categoria'] ?? '';
 $id = $_GET['id'] ?? '';
+
+// Verificamos qual busca será realizada
+if ($busca != '' || $categoria != '') {
+
+    $livros = filtrarLivros($conexao, $busca, $categoria);
+
+} elseif ($id != '') {
+
+    $livros = buscarLivrosPorGenero($conexao, (int) $id);
+
+} else {
+
+    $livros = buscarLivros($conexao);
+
+}
 
 ?>
 
@@ -31,15 +47,28 @@ $id = $_GET['id'] ?? '';
             <input
                 type="search"
                 name="busca"
-                placeholder="Pesquisar por título ou autor...">
+                placeholder="Pesquisar por título ou autor..."
+                value="<?= htmlspecialchars($busca) ?>">
 
             <select name="categoria">
 
                 <option value="">Todas as categorias</option>
-                <option value="Romance">Romance</option>
-                <option value="Suspense">Suspense</option>
-                <option value="Fantasia">Fantasia</option>
-                <option value="Drama">Drama</option>
+
+                <option value="Romance" <?= $categoria == 'Romance' ? 'selected' : '' ?>>
+                    Romance
+                </option>
+
+                <option value="Suspense" <?= $categoria == 'Suspense' ? 'selected' : '' ?>>
+                    Suspense
+                </option>
+
+                <option value="Fantasia" <?= $categoria == 'Fantasia' ? 'selected' : '' ?>>
+                    Fantasia
+                </option>
+
+                <option value="Drama" <?= $categoria == 'Drama' ? 'selected' : '' ?>>
+                    Drama
+                </option>
 
             </select>
 
@@ -49,9 +78,9 @@ $id = $_GET['id'] ?? '';
 
         <div class="livros">
 
-            <?php foreach ($livros as $livro): ?>
+            <?php if (count($livros) > 0): ?>
 
-                <?php if ($id == '' || $livro['genero_id'] == $id): ?>
+                <?php foreach ($livros as $livro): ?>
 
                     <article class="livro-card">
 
@@ -81,9 +110,13 @@ $id = $_GET['id'] ?? '';
 
                     </article>
 
-                <?php endif; ?>
+                <?php endforeach; ?>
 
-            <?php endforeach; ?>
+            <?php else: ?>
+
+                <p>Nenhum livro encontrado.</p>
+
+            <?php endif; ?>
 
         </div>
 
