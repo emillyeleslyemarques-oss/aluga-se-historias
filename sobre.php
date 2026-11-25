@@ -7,7 +7,7 @@
         <p>Mais que uma livraria, um convite para descobrir novos mundos.</p>
     </section>
 
-    <section class="secao sobre-conteudo">
+    <section class="secao">
         <img src="assets/img/banner.jpg" alt="Livros em uma livraria">
 
         <div>
@@ -22,7 +22,8 @@
                 permitindo que mais pessoas tenham contato com a leitura
                 de maneira prática e acessível.
             </p>
-
+        </div>
+        <div>
             <h2>Nosso objetivo</h2>
             <p>
                 Incentivar o hábito da leitura, ampliar o acesso aos livros
