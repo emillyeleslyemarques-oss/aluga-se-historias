@@ -1,0 +1,276 @@
+
+/* CATÁLOGO E ALUGUEL */
+
+.titulo-pagina {
+    padding: 38px 0 22px;
+}
+
+.titulo-pagina .etiqueta {
+    margin-bottom: 8px;
+}
+
+.titulo-pagina h1 {
+    color: var(--marrom);
+    font-size: clamp(30px, 4vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.titulo-pagina > p {
+    color: var(--cinza);
+    font-size: 16px;
+}
+
+/* FILTROS */
+
+.filtros {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.5fr) minmax(180px, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    background: var(--branco);
+    border: 1px solid #EAE5DC;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px 0 28px;
+    box-shadow: 0 4px 16px rgba(66, 59, 54, 0.04);
+}
+
+.filtros input,
+.filtros select,
+.filtros button,
+.formulario input:not([type="checkbox"]),
+.formulario select {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #DCD5CB;
+    border-radius: 8px;
+    padding: 0 13px;
+    background: #FFFEFC;
+    color: var(--marrom);
+    font: inherit;
+    font-size: 14px;
+}
+
+.filtros input:focus,
+.filtros select:focus,
+.formulario input:focus,
+.formulario select:focus {
+    outline: 2px solid rgba(83, 108, 123, 0.2);
+    border-color: var(--azul-escuro);
+}
+
+.filtros button {
+    width: auto;
+    min-width: 112px;
+    border: 0;
+    padding: 0 22px;
+    background: var(--azul-escuro);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filtros button:hover {
+    background: var(--vinho);
+}
+
+/* FORMULÁRIOS */
+
+.formulario-container {
+    max-width: 850px;
+    margin: 8px auto 65px;
+}
+
+.formulario {
+    background: var(--branco);
+    border: 1px solid #EAE5DC;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 28px rgba(66, 59, 54, 0.06);
+}
+
+.formulario h2 {
+    font-family: Georgia, serif;
+    color: var(--azul-escuro);
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.formulario-descricao {
+    color: var(--cinza);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.campos-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: var(--marrom);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario input::placeholder {
+    color: #A29B91;
+}
+
+.termos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0;
+    color: var(--cinza);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.termos input {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--vinho);
+}
+
+.formulario .botao-principal {
+    border: 0;
+    cursor: pointer;
+    min-height: 46px;
+    padding: 0 25px;
+}
+
+/* LOGIN E CADASTRO */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f1b6b5, #a7c3d0);
+}
+
+.login-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1 {
+    color: #a24c68;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-subtitulo {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.login-card form {
+    margin-top: 25px;
+}
+
+.campo-login {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-login label {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-login input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.campo-login input:focus {
+    border-color: #a24c68;
+}
+
+.botao-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a24c68;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #843c55;
+}
+
+.login-cadastro {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.login-cadastro a,
+.voltar-inicio {
+    color: #a24c68;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-cadastro a:hover,
+.voltar-inicio:hover {
+    text-decoration: underline;
+}
+
+.voltar-inicio {
+    display: block;
+    text-align: left;
+    margin-block: 16px;
+}
+
+.login-card .voltar-inicio {
+    text-align: center;
+}
+
+/* INFORMAÇÕES DO LIVRO */
+
+.informacoes-livro {
+    padding-block-start: 20px;
+    padding-block-end: 24px;
+}
+
+.informacoes-extra {
+    padding-block-end: 8px;
+}
+
+.informacoes-botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
