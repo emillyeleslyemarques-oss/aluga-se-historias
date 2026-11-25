@@ -48,10 +48,11 @@ $generos = buscarGeneros($conexao);
 
         <div class="categorias">
             <?php
-                $classes = ['categoria-rosa', 'categoria-azul', 'categoria-verde', 'categoria-vinho'];
+                $classes = ['rosa', 'azul', 'verde', 'vinho'];
                 $contador = 0;
+
                 foreach ($generos as $genero): ?>
-                <a href="catalogo.php?id=<?= $genero['id'] ?>" class="categoria <?= $classes[$contador] ?>">
+                    <a href="catalogo.php?id=<?= $genero['id'] ?>" class="categoria categoria-<?= $classes[$contador] ?>">
                     <span>0<?= $contador = $contador + 1 ?></span>
                     <h3><?= $genero['titulo'] ?></h3>
                     <p><?= $genero['descricao'] ?></p>
