@@ -1,3 +1,5 @@
+<body>
+
 <header class="cabecalho">
     <a href="index.php" class="logo">📖 Aluga-se <span>Histórias.</span></a>
     <nav>
@@ -10,5 +12,4 @@
     <a href="catalogo.php" class="botao-header">Encontrar livros</a>
 </header>
 
-<body>
 <main>
