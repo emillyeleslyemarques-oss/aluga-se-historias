@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php 
+    $tituloPagina = "Aluga-se Histórias | Cadastro";
+    $linksCSS = ['assets/css/style.css'];
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | Aluga-se Histórias</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    include_once "./includes/cabeca.php";
+?>
 
 <body>
-
     <main class="login-container">
         <section class="login-card">
 
@@ -63,7 +61,5 @@
 
         </section>
     </main>
-
 </body>
-
 </html>

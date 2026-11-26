@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Aluga-se Histórias</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<?php 
+    $tituloPagina = "Aluga-se Histórias | Login";
+    $linksCSS = ['assets/css/style.css'];
 
+    include_once "./includes/cabeca.php";
+?>
+
+<body>
     <main class="login-container">
         <section class="login-card">
 
@@ -38,7 +38,6 @@
             </p>
 
             <a href="index.php" class="voltar-inicio">Voltar para o início</a>
-
         </section>
     </main>
 </body>
