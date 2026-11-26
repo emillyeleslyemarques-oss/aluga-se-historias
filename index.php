@@ -11,8 +11,8 @@
     $livros = buscarLivros($conexao);
     $generos = buscarGeneros($conexao);
 
-    include_once "./includes/cabeca.php";
-    include_once "./includes/cabecalho.php";
+    include_once __DIR__ . "/includes/cabeca.php";
+    include_once __DIR__ . "/includes/cabecalho.php";
 ?>
 
 <section class="hero">

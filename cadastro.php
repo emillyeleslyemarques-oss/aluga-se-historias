@@ -4,7 +4,7 @@
     $tituloPagina = "Aluga-se Histórias | Cadastro";
     $linksCSS = ['assets/css/style.css'];
 
-    include_once "./includes/cabeca.php";
+    include_once __DIR__ . "/includes/cabeca.php";
 ?>
 
 <body>
