@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php 
-    require_once __DIR__ . '/src/genero_crud.php';
-    require_once __DIR__ . '/src/livro_crud.php';
-    require_once __DIR__ . '/conexao.php';
-
     $tituloPagina = "Aluga-se Histórias | Sobre";
     $linksCSS = ['assets/css/style.css'];
-
-    $livros = buscarLivros($conexao);
-    $generos = buscarGeneros($conexao);
 
     include_once "./includes/cabeca.php";
     include_once "./includes/cabecalho.php";
