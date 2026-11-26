@@ -160,6 +160,5 @@
     <a href="catalogo.php" class="botao-principal">Descobrir livros</a>
 </section>
 
-<?php 
-include __DIR__ . '/includes/rodape.php'; ?>
+<?php include __DIR__ . '/includes/rodape.php'; ?>
 </html>
