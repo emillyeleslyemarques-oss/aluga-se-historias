@@ -1,42 +1,39 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <?php
+    require_once __DIR__ . '/conexao.php';
+    require_once __DIR__ . '/src/livro_crud.php';
+    require_once __DIR__ . '/src/genero_crud.php';
 
-include __DIR__ . '/includes/cabecalho.php';
+    $tituloPagina = "Aluga-se Histórias | Livro";
+    $linksCSS = ['assets/css/style.css'];
+    $livro = null;
+    $genero = null;
 
-require_once __DIR__ . '/conexao.php';
-require_once __DIR__ . '/src/livro_crud.php';
-require_once __DIR__ . '/src/genero_crud.php';
+    // Recebe o ID pela URL
+    $id = $_GET['id'] ?? null;
 
-// Recebe o ID pela URL
-$id = $_GET['id'] ?? null;
+    // Busca o livro selecionado
+    if ($id !== null && is_numeric($id)) {
+        $livro = buscarLivroPorId($conexao, (int) $id);
+    }
 
-$livro = null;
-$genero = null;
+    // Busca o gênero do livro
+    if ($livro !== null) {
+        $genero = buscarGeneroPorId($conexao, (int) $livro['genero_id']);
+    }
 
-// Busca o livro selecionado
-if ($id !== null && is_numeric($id)) {
-
-    $livro = buscarLivroPorId($conexao, (int) $id);
-
-}
-
-// Busca o gênero do livro
-if ($livro !== null) {
-
-    $genero = buscarGeneroPorId($conexao, (int) $livro['genero_id']);
-
-}
-
+    include_once "./includes/cabeca.php";
+    include_once "./includes/cabecalho.php";
 ?>
 
-<main class="secao">
+<div class="secao">
 
     <a href="catalogo.php" class="voltar-inicio">
         ← Voltar para o catálogo
     </a>
 
     <?php if ($livro !== null): ?>
-
         <section>
             <div class="capa-detalhe">
 
@@ -111,7 +108,7 @@ if ($livro !== null) {
         </section>
 
     <?php endif; ?>
-
-</main>
+</div>
 
 <?php include __DIR__ . '/includes/rodape.php'; ?>
+</html>

@@ -1,127 +1,131 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <?php
-include __DIR__ . '/includes/cabecalho.php';
+    require_once __DIR__ . '/conexao.php';
+    require_once __DIR__ . '/src/genero_crud.php';
+    require_once __DIR__ . '/src/livro_crud.php';
 
-require_once __DIR__ . '/conexao.php';
-require_once __DIR__ . '/src/genero_crud.php';
-require_once __DIR__ . '/src/livro_crud.php';
+    $tituloPagina = "Aluga-se Histórias | Catalogo";
+    $linksCSS = ['assets/css/style.css'];
+    $livros = null;
 
-// Recebemos os dados da pesquisa
-$busca = $_GET['busca'] ?? '';
-$categoria = $_GET['categoria'] ?? '';
-$id = $_GET['id'] ?? '';
+    if ($_SERVER['REQUEST_METHOD'] === "GET"){
+        // Recebemos os dados da pesquisa
+        $busca = $_GET['busca'] ?? '';
+        $categoria = $_GET['categoria'] ?? '';
+        $id = $_GET['id'] ?? '';
 
-// Verificamos qual busca será realizada
-if ($busca != '' || $categoria != '') {
+        // Verificamos qual busca será realizada
+        if ($busca != '' || $categoria != '') {
 
-    $livros = filtrarLivros($conexao, $busca, $categoria);
+            $livros = filtrarLivros($conexao, $busca, $categoria);
 
-} elseif ($id != '') {
+        } elseif ($id != '') {
 
-    $livros = buscarLivrosPorGenero($conexao, (int) $id);
+            $livros = buscarLivrosPorGenero($conexao, (int) $id);
 
-} else {
+        } else {
 
-    $livros = buscarLivros($conexao);
+            $livros = buscarLivros($conexao);
 
-}
+        }
+    }
 
+    include_once "./includes/cabeca.php";
+    include_once "./includes/cabecalho.php";
 ?>
 
-<main>
+<section class="titulo-pagina">
 
-    <section class="titulo-pagina">
+    <span class="etiqueta">NOSSO ACERVO</span>
 
-        <span class="etiqueta">NOSSO ACERVO</span>
+    <h1>Nosso Catálogo</h1>
 
-        <h1>Nosso Catálogo</h1>
+    <p>Descubra sua próxima história.</p>
 
-        <p>Descubra sua próxima história.</p>
+</section>
 
-    </section>
+<section class="secao">
 
-    <section class="secao">
+    <form class="filtros" action="catalogo.php" method="get">
 
-        <form class="filtros" action="catalogo.php" method="get">
+        <input
+            type="search"
+            name="busca"
+            placeholder="Pesquisar por título ou autor..."
+            value="<?= htmlspecialchars($busca) ?>">
 
-            <input
-                type="search"
-                name="busca"
-                placeholder="Pesquisar por título ou autor..."
-                value="<?= htmlspecialchars($busca) ?>">
+        <select name="categoria">
 
-            <select name="categoria">
+            <option value="">Todas as categorias</option>
 
-                <option value="">Todas as categorias</option>
+            <option value="Romance" <?= $categoria == 'Romance' ? 'selected' : '' ?>>
+                Romance
+            </option>
 
-                <option value="Romance" <?= $categoria == 'Romance' ? 'selected' : '' ?>>
-                    Romance
-                </option>
+            <option value="Suspense" <?= $categoria == 'Suspense' ? 'selected' : '' ?>>
+                Suspense
+            </option>
 
-                <option value="Suspense" <?= $categoria == 'Suspense' ? 'selected' : '' ?>>
-                    Suspense
-                </option>
+            <option value="Fantasia" <?= $categoria == 'Fantasia' ? 'selected' : '' ?>>
+                Fantasia
+            </option>
 
-                <option value="Fantasia" <?= $categoria == 'Fantasia' ? 'selected' : '' ?>>
-                    Fantasia
-                </option>
+            <option value="Drama" <?= $categoria == 'Drama' ? 'selected' : '' ?>>
+                Drama
+            </option>
 
-                <option value="Drama" <?= $categoria == 'Drama' ? 'selected' : '' ?>>
-                    Drama
-                </option>
+        </select>
 
-            </select>
+        <button type="submit">Pesquisar</button>
 
-            <button type="submit">Pesquisar</button>
+    </form>
 
-        </form>
+    <div class="livros">
 
-        <div class="livros">
+        <?php if (count($livros) > 0): ?>
 
-            <?php if (count($livros) > 0): ?>
+            <?php foreach ($livros as $livro): ?>
 
-                <?php foreach ($livros as $livro): ?>
+                <article class="livro-card">
 
-                    <article class="livro-card">
+                    <img
+                        src="<?= $livro['caminhoImagem'] ?>"
+                        alt="Capa do livro <?= $livro['titulo'] ?>">
 
-                        <img
-                            src="<?= $livro['caminhoImagem'] ?>"
-                            alt="Capa do livro <?= $livro['titulo'] ?>">
+                    <div class="livro-info">
 
-                        <div class="livro-info">
+                        <span>
+                            <?= $livro['nome_genero'] ?>
+                        </span>
 
-                            <span>
-                                <?= $livro['nome_genero'] ?>
-                            </span>
+                        <h3>
+                            <?= $livro['titulo'] ?>
+                        </h3>
 
-                            <h3>
-                                <?= $livro['titulo'] ?>
-                            </h3>
+                        <p>
+                            Autoria: <?= $livro['autoria'] ?>
+                        </p>
 
-                            <p>
-                                Autoria: <?= $livro['autoria'] ?>
-                            </p>
+                        <a href="livro.php?id=<?= $livro['id'] ?>">
+                            Veja detalhes →
+                        </a>
 
-                            <a href="livro.php?id=<?= $livro['id'] ?>">
-                                Veja detalhes →
-                            </a>
+                    </div>
 
-                        </div>
+                </article>
 
-                    </article>
+            <?php endforeach; ?>
 
-                <?php endforeach; ?>
+        <?php else: ?>
 
-            <?php else: ?>
+            <p>Nenhum livro encontrado.</p>
 
-                <p>Nenhum livro encontrado.</p>
+        <?php endif; ?>
 
-            <?php endif; ?>
+    </div>
 
-        </div>
-
-    </section>
-
-</main>
+</section>
 
 <?php include __DIR__ . '/includes/rodape.php'; ?>
+</html>
