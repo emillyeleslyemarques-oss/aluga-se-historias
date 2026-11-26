@@ -38,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("location:../index.php");
         exit;
         } else {
-
             header("location:../login.php");
             exit;
         }
