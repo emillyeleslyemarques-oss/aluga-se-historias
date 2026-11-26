@@ -48,7 +48,7 @@
             <div class="informacoes-livro">
 
                 <span class="genero-romance">
-                    <?= htmlspecialchars($genero['nome'] ?? 'Gênero não informado') ?>
+                    <?= htmlspecialchars($genero['titulo']  ) ?>
                 </span>
 
                 <h1>
@@ -67,7 +67,7 @@
 
                     <p>
                         <strong>Gênero:</strong>
-                        <?= htmlspecialchars($genero['nome'] ?? 'Não informado') ?>
+                        <?= htmlspecialchars($genero['titulo']) ?>
                     </p>
 
                 </div>
@@ -84,15 +84,7 @@
 
         </section>
 
-        <section>
-
-            <h2>Sobre o livro</h2>
-
-            <p>
-                <?= htmlspecialchars($livro['descricao'] ?? 'Ainda não existe uma descrição cadastrada para este livro.') ?>
-            </p>
-
-        </section>
+        
 
     <?php else: ?>
 
