@@ -1,10 +1,7 @@
-
 <?php
-
-
-
    require_once "../conexao.php";
    require_once "../src/usuario_crud.php";
+   require_once "../src/auth.php";
 
 // Verificar se o formulário foi enviado pelo método POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -35,8 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Verificar se o usuário existe e se a senha está correta
         if ($usuario && (password_verify($senha, $usuario["senha"]) ||
             $senha === $usuario["senha"]
-         )) {
-
+        )) {
+        
+        login($usuario['id'], $usuario['nomeCompleto'], $usuario['email'], $usuario['telefone'], $usuario['tipoUsuario']);
         header("location:../index.php");
         exit;
         } else {

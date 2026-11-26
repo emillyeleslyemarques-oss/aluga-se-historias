@@ -1,4 +1,3 @@
-
 <?php
 
 // Função para cadastrar um usuário

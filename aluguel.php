@@ -4,13 +4,18 @@
     require_once __DIR__ . "/conexao.php";
     require_once __DIR__ . "/src/livro_crud.php";
     require_once __DIR__ . "/src/usuario_crud.php";
+    require_once __DIR__ . "/src/auth.php";
+    
+    exigirLogin();
 
     $tituloPagina = "Aluga-se Histórias | Aluguel";
     $linksCSS = ['assets/css/style.css'];
     $linkIcone = __DIR__ . "/assets/img/icone.svg";
 
     $livros = buscarLivros($conexao);
-    $usuario = null;
+    $nomeComplete = $_SESSION['nomeCompleto'] ?? '';
+    $email = $_SESSION['email'] ?? '';
+    $telefone = $_SESSION['telefone'] ?? '';
 
     include_once __DIR__ . "/includes/cabeca.php";
     include_once __DIR__ . "/includes/cabecalho.php";
@@ -31,46 +36,34 @@
         <div class="campos-formulario">
             <div class="campo">
                 <label for="nome">Nome completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required disabled>
+                <input type="text" id="nome" name="nome" placeholder="<?= htmlspecialchars($nomeComplete) ?>" required disabled>
             </div>
 
             <div class="campo">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required disabled>
+                <input type="email" id="email" name="email" placeholder="<?= htmlspecialchars($email) ?>" required disabled>
             </div>
 
             <div class="campo">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required disabled>
+                <input type="tel" id="telefone" name="telefone" placeholder="<?= !empty($telefone) ? htmlspecialchars($telefone) : "Telefone não foi informado" ?>" required disabled>
             </div>
 
             <div class="campo">
                 <label for="livro">Livro desejado</label>
-                <select id="livro" name="livro" required>
+                <select id="livro" name="livro" required <?= isset($_GET['id']) ? 'disabled' : '' ?>>
                     <option value="">Selecione um livro</option>
-                    <?php foreach ($livros as $livro):?>
-                        <option value="<?= $livro['id'] ?>">
+                    <?php foreach ($livros as $livro): ?>
+                        <option value="<?= $livro['id'] ?>" <?= isset($_GET['id']) == $livro['id'] ? 'selected' : '' ?>>
                             <?= $livro['titulo'] ?>
                         </option>
                     <?php endforeach; ?>
-                    <option>A Lenda dos Sete Reinos</option>
-                    <option>A Melodia dos Dias Perdidos</option>
-                    <option>Entre Cartas e Promessas</option>
-                    <option>Entre Mentiras e Desejos</option>
-                    <option>O Guardião das Estrelas Esquecidas</option>
-                    <option>O Mapa das Coisas Esquecidas</option>
-                    <option>O Peso das Minhas Escolhas</option>
-                    <option>O Reino das Sombras Perdidas</option>
-                    <option>O Segredo da Casa Sombria</option>
-                    <option>O Último Trem da Meia-noite</option>
-                    <option>Quando o Destino nos Encontrou</option>
                 </select>
             </div>
 
             <div class="campo">
                 <label for="prazo">Prazo de aluguel</label>
                 <select id="prazo" name="prazo" required>
-                    <option value="">Selecione o prazo</option>
                     <option value="7">7 dias</option>
                     <option value="14">14 dias</option>
                     <option value="30">30 dias</option>
