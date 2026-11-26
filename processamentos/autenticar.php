@@ -1,8 +1,5 @@
 
 <?php
-
-
-
    require_once "../conexao.php";
    require_once "../src/usuario_crud.php";
 
