@@ -7,6 +7,7 @@
 
     $tituloPagina = "Aluga-se Histórias | Catalogo";
     $linksCSS = ['assets/css/style.css'];
+    $linkIcone = __DIR__ . "/assets/img/icone.svg";
     $livros = null;
 
     if ($_SERVER['REQUEST_METHOD'] === "GET"){

@@ -7,6 +7,7 @@
 
     $tituloPagina = "Aluga-se Histórias | Livro";
     $linksCSS = ['assets/css/style.css'];
+    $linkIcone = __DIR__ . "/assets/img/icone.svg";
     $livro = null;
     $genero = null;
 

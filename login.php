@@ -3,6 +3,7 @@
 <?php 
     $tituloPagina = "Aluga-se Histórias | Login";
     $linksCSS = ['assets/css/style.css'];
+    $linkIcone = __DIR__ . "/assets/img/icone.svg";
 
     include_once __DIR__ . "/includes/cabeca.php";
 ?>
