@@ -54,19 +54,31 @@
                 </h1>
 
                 <p>
-                    <?= htmlspecialchars($livro['descricao'] ?? 'Descrição não cadastrada.') ?>
+                    <?= htmlspecialchars($livro['descricao'] ?? 'Informação não cadastrada.') ?>
                 </p>
 
                 <div class="informacoes-extra">
+                    <h2>Detalhes:</h2>
+                    <p>
+                        <strong>Gênero:</strong>
+                        <?= htmlspecialchars($genero['titulo']) ?>
+                    </p>
                     <p>
                         <strong>Autoria:</strong> 
                         <?= htmlspecialchars($livro['autoria']) ?>
                     </p>
                     <p>
-                        <strong>Gênero:</strong>
-                        <?= htmlspecialchars($genero['titulo']) ?>
+                        <strong>Editora:</strong>
+                        <?= htmlspecialchars($livro['editora']) ?>
                     </p>
-
+                    <p>
+                        <strong>Faixa Etária:</strong>
+                        <?= htmlspecialchars($livro['faixaEtaria']) ?> Anos
+                    </p>
+                    <p>
+                        <strong>Quantidade de Páginas:</strong>
+                        <?= htmlspecialchars($livro['quantPaginas'] ?? "Informação não cadastrada.") ?>
+                    </p>
                 </div>
 
                 <div class="informacoes-botoes">
