@@ -60,10 +60,6 @@
                 <div class="informacoes-extra">
                     <h2>Detalhes:</h2>
                     <p>
-                        <strong>Gênero:</strong>
-                        <?= htmlspecialchars($genero['titulo']) ?>
-                    </p>
-                    <p>
                         <strong>Autoria:</strong> 
                         <?= htmlspecialchars($livro['autoria']) ?>
                     </p>
@@ -77,7 +73,11 @@
                     </p>
                     <p>
                         <strong>Quantidade de Páginas:</strong>
-                        <?= htmlspecialchars($livro['quantPaginas'] ?? "Informação não cadastrada.") ?>
+                        <?= htmlspecialchars(strval($livro['quantPaginas'])) ?>
+                    </p>
+                    <p>
+                        <strong>Data de Publicação:</strong>
+                        <?= htmlspecialchars(strval($livro['anoPublicacao'])) ?>
                     </p>
                 </div>
 
