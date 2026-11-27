@@ -37,18 +37,16 @@
     <?php if ($livro !== null): ?>
         <section>
             <div class="capa-detalhe">
-
                 <img 
                     src="<?= htmlspecialchars($livro['caminhoImagem']) ?>"
                     alt="Capa de <?= htmlspecialchars($livro['titulo']) ?>"
                 >
-
             </div>
 
             <div class="informacoes-livro">
 
-                <span class="genero-romance">
-                    <?= htmlspecialchars($genero['titulo']  ) ?>
+                <span>
+                    <?= htmlspecialchars($genero['titulo']) ?>
                 </span>
 
                 <h1>
@@ -56,15 +54,14 @@
                 </h1>
 
                 <p>
-                    <strong>Autoria:</strong> <?= htmlspecialchars($livro['autoria']) ?>
-                </p>
-
-                <p>
                     <?= htmlspecialchars($livro['descricao'] ?? 'Descrição não cadastrada.') ?>
                 </p>
 
                 <div class="informacoes-extra">
-
+                    <p>
+                        <strong>Autoria:</strong> 
+                        <?= htmlspecialchars($livro['autoria']) ?>
+                    </p>
                     <p>
                         <strong>Gênero:</strong>
                         <?= htmlspecialchars($genero['titulo']) ?>
@@ -72,14 +69,15 @@
 
                 </div>
 
-                <a href="aluguel.php?id=<?= $livro['id'] ?>" class="botao-principal">
-                    Solicitar aluguel
-                </a>
+                <div class="informacoes-botoes">
+                    <a href="aluguel.php?id=<?= $livro['id'] ?>" class="botao-principal">
+                        Solicitar aluguel
+                    </a>
 
-                <a href="catalogo.php" class="botao-secundario">
-                    Voltar ao catálogo
-                </a>
-
+                    <a href="catalogo.php" class="botao-secundario">
+                        Voltar ao catálogo
+                    </a>
+                </div>
             </div>
 
         </section>

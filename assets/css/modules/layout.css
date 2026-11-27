@@ -17,6 +17,7 @@
     font-size: 25px;
     color: var(--azul-escuro);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .logo span {

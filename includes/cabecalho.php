@@ -1,7 +1,7 @@
 <body>
 
 <header class="cabecalho">
-    <div class="logo">📖 Aluga-se <span>Histórias.</span></div>
+    <a href="index.php" class="logo">📖 Aluga-se <span>Histórias.</span></a>
     <nav>
         <a href="index.php">Início</a>
         <a href="sobre.php">Sobre</a>
