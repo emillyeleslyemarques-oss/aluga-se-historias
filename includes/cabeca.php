@@ -23,7 +23,7 @@
     <title><?= $tituloPagina ?></title>
     
     <?php if(isset($linkIcone)): ?>  
-        <link rel="icon" type="image/svg+xml" href="assets/img/icone.svg">
+        <link rel="icon" type="image/svg+xml" href="<?= htmlspecialchars($linkIcone, ENT_QUOTES, "UTF-8") ?>">
     <?php endif; ?>
 
     <?php foreach($linksCSS as $link): ?>

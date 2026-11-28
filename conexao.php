@@ -2,11 +2,11 @@
 
 $servidor = "localhost";
 
-$banco = "aluga-se_historias";
+$banco = "aluga-se-historias";
 
 $usuario = "root";
 
-$senha = "senacpenha";
+$senha = "resiliencia";
  
 try {
 

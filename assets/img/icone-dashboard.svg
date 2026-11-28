@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ícone minimalista de dashboard com gráfico de crescimento">
+  <!-- Fundo creme arredondado; o espaço externo permanece transparente. -->
+  <rect x="64" y="64" width="384" height="384" rx="82" fill="#FFF8ED" stroke="#D93678" stroke-width="22"/>
+  <g fill="#315F7D">
+    <rect x="138" y="293" width="65" height="70" rx="17"/>
+    <rect x="229" y="260" width="65" height="103" rx="17"/>
+    <rect x="320" y="228" width="65" height="135" rx="17"/>
+  </g>
+  <path d="M145 263 L225 203 L271 235 L365 164" fill="none" stroke="#D93678" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M333 164 H365 V196" fill="none" stroke="#D93678" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
